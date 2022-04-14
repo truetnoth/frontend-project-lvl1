@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import isEvenGame from '../src/games/even-game.js';
+import calcGame from '../src/games/calc-game.js';
 import { welcome } from '../src/index.js';
 
 const userName = welcome();
-isEvenGame(userName);
+calcGame(userName);
