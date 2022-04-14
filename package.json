@@ -18,7 +18,8 @@
   "homepage": "https://github.com/truetnoth/frontend-project-lvl1#readme",
   "type": "module",
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+	"brain-even": "bin/brain-even.js"
   },
   "dependencies": {
     "brain-games": "^1.1.5",
