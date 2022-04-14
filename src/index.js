@@ -16,3 +16,10 @@ export const generateRandom = (limit = 100) => {
 	return Math.floor(Math.random() * limit);
 };
 
+export const countGcd = (firstNumber, secondNumber) => {
+	if (!secondNumber) {
+		return firstNumber;
+	}
+	
+	return countGcd(secondNumber, firstNumber % secondNumber);
+}
