@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/truetnoth/frontend-project-lvl1/issues"
   },
-  "homepage": "https://github.com/truetnoth/frontend-project-lvl1#readme"
+  "homepage": "https://github.com/truetnoth/frontend-project-lvl1#readme",
+  "type": "module",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
+  "dependencies": {
+    "brain-games": "^1.1.5"
+  }
 }
