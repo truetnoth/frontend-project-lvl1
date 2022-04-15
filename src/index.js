@@ -12,7 +12,7 @@ export const welcome = () => {
 
 // };
 
-export const takeAnswer = () => {
+export const userAnswer = () => {
 	return readlineSync.question('Your answer: ');
 }
 

@@ -3,7 +3,7 @@ import {
 	ROUND_NUMBER, 
 	showFailMessage,
 	checkAnswer,
-	takeAnswer,
+	userAnswer,
 } from '../index.js';
 
 const calcGame = (userName) => {
@@ -21,7 +21,7 @@ const calcGame = (userName) => {
     
 	console.log(`Question: ${expression}`);
 
-    const answer = takeAnswer();
+    const answer = userAnswer();
 
     if (Number(answer) !== correctAnswer) {
 	  showFailMessage(answer, correctAnswer, userName);

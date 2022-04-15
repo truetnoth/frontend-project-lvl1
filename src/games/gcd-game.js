@@ -4,7 +4,7 @@ import {
 	showFailMessage,
 	countGcd,
 	checkAnswer,
-	takeAnswer,
+	userAnswer,
 } from '../index.js';
 
 const gcd = (userName) => {
@@ -20,7 +20,7 @@ const gcd = (userName) => {
     
 	console.log(`Question: ${expression}`);
 
-    const answer = takeAnswer();
+    const answer = userAnswer();
 
     if (Number(answer) !== correctAnswer) {
 	  showFailMessage(answer, correctAnswer, userName);

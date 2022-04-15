@@ -3,7 +3,7 @@ import {
 	ROUND_NUMBER, 
 	showFailMessage,
 	checkAnswer,
-	takeAnswer,
+	userAnswer,
 } from '../index.js';
 
 const isEvenGame = (userName) => {
@@ -16,7 +16,7 @@ const isEvenGame = (userName) => {
 
     console.log(`Question: ${askNumber}`);
 
-    const answer = takeAnswer();
+    const answer = userAnswer();
 
     if (answer !== correctAnswer) {
 	  showFailMessage(answer, correctAnswer, userName);
