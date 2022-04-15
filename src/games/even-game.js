@@ -1,28 +1,30 @@
-import readlineSync from 'readline-sync';
-import { generateRandom } from '../index.js';
+import { 
+	generateRandom, 
+	ROUND_NUMBER, 
+	showFailMessage,
+	checkAnswer,
+	takeAnswer,
+} from '../index.js';
 
 const isEvenGame = (userName) => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  const ROUND_NUMBER = 3;
   let questionCount = 0;
 
   for (questionCount; questionCount < ROUND_NUMBER; questionCount += 1) {
     const askNumber = generateRandom();
-    const realAnswer = askNumber % 2 === 0 ? 'yes' : 'no';
+    const correctAnswer = askNumber % 2 === 0 ? 'yes' : 'no';
 
     console.log(`Question: ${askNumber}`);
 
-    const answer = readlineSync.question('Your answer: ');
+    const answer = takeAnswer();
 
-    if (answer !== realAnswer) {
-      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${realAnswer}".\nLet's try again, ${userName}!`);
+    if (answer !== correctAnswer) {
+	  showFailMessage(answer, correctAnswer, userName);
       break;
     } else console.log('Correct!');
   }
 
-  if (questionCount === ROUND_NUMBER) {
-    console.log(`Congratulations, ${userName}!`);
-  }
+  checkAnswer(questionCount, userName);
 };
 
 export default isEvenGame;

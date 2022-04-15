@@ -1,5 +1,10 @@
-import readlineSync from 'readline-sync';
-import { generateRandom, ROUND_NUMBER } from '../index.js';
+import { 
+	generateRandom, 
+	ROUND_NUMBER, 
+	showFailMessage,
+	checkAnswer,
+	takeAnswer,
+} from '../index.js';
 
 const calcGame = (userName) => {
   console.log('What is the result of the expression?');
@@ -12,21 +17,19 @@ const calcGame = (userName) => {
 	const sign = operations[generateRandom(operations.length)];
 
 	const expression = `${firstNumber}${sign}${secondNumber}`;
-    const realAnswer = Function('return ' + expression)();
+    const correctAnswer = Function('return ' + expression)();
     
 	console.log(`Question: ${expression}`);
 
-    const answer = readlineSync.question('Your answer: ');
+    const answer = takeAnswer();
 
-    if (Number(answer) !== realAnswer) {
-      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${realAnswer}".\nLet's try again, ${userName}!`);
+    if (Number(answer) !== correctAnswer) {
+	  showFailMessage(answer, correctAnswer, userName);
       break;
     } else console.log('Correct!');
   }
 
-  if (questionCount === ROUND_NUMBER) {
-    console.log(`Congratulations, ${userName}!`);
-  }
+  checkAnswer(questionCount, userName);
 };
 
 export default calcGame;
