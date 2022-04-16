@@ -3,3 +3,12 @@
 
 ## Brain-even
 [![asciicast](https://asciinema.org/a/QldPFPm6DNWDHaX7W2WNRKyLE.svg)](https://asciinema.org/a/QldPFPm6DNWDHaX7W2WNRKyLE)
+
+## Brain-calc
+[![asciicast](https://asciinema.org/a/KN3LA3i5NXRyCwoSYdWpk6He4.svg)](https://asciinema.org/a/KN3LA3i5NXRyCwoSYdWpk6He4)
+
+## Brain-gcd
+[![asciicast](https://asciinema.org/a/ydywDMzynJg3Yj0b31swSH22o.svg)](https://asciinema.org/a/ydywDMzynJg3Yj0b31swSH22o)
+
+## Brain-progression
+[![asciicast](https://asciinema.org/a/9wckUgpUjdYzd5e9w8wwZGHbv.svg)](https://asciinema.org/a/9wckUgpUjdYzd5e9w8wwZGHbv)
