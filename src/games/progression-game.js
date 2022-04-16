@@ -2,22 +2,22 @@ import {
   generateRandom,
   ROUND_NUMBER,
   showFailMessage,
+  generateRandomSequence,
   checkAnswer,
   userAnswer,
 } from '../index.js';
 
-const calcGame = (userName) => {
-  console.log('What is the result of the expression?');
-  const operations = ['*', '+', '-'];
+const progression = (userName) => {
+  console.log('What number is missing in the progression?');
   let questionCount = 0;
 
   for (questionCount; questionCount < ROUND_NUMBER; questionCount += 1) {
-    const firstNumber = generateRandom();
-    const secondNumber = generateRandom();
-    const sign = operations[generateRandom(operations.length)];
+    const sequence = generateRandomSequence();
+    const sequenceHole = generateRandom(sequence.length);
+    const correctAnswer = sequence[sequenceHole];
 
-    const expression = `${firstNumber}${sign}${secondNumber}`;
-    const correctAnswer = Function(`return ${expression}`)();
+    sequence[sequenceHole] = '..';
+    const expression = sequence.join(' ');
 
     console.log(`Question: ${expression}`);
 
@@ -32,4 +32,4 @@ const calcGame = (userName) => {
   checkAnswer(questionCount, userName);
 };
 
-export default calcGame;
+export default progression;

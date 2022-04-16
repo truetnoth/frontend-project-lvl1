@@ -1,9 +1,9 @@
-import { 
-	generateRandom, 
-	ROUND_NUMBER, 
-	showFailMessage,
-	checkAnswer,
-	userAnswer,
+import {
+  generateRandom,
+  ROUND_NUMBER,
+  showFailMessage,
+  checkAnswer,
+  userAnswer,
 } from '../index.js';
 
 const isEvenGame = (userName) => {
@@ -19,7 +19,7 @@ const isEvenGame = (userName) => {
     const answer = userAnswer();
 
     if (answer !== correctAnswer) {
-	  showFailMessage(answer, correctAnswer, userName);
+      showFailMessage(answer, correctAnswer, userName);
       break;
     } else console.log('Correct!');
   }

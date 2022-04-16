@@ -1,10 +1,10 @@
-import { 
-	generateRandom, 
-	ROUND_NUMBER, 
-	showFailMessage,
-	countGcd,
-	checkAnswer,
-	userAnswer,
+import {
+  generateRandom,
+  ROUND_NUMBER,
+  showFailMessage,
+  countGcd,
+  checkAnswer,
+  userAnswer,
 } from '../index.js';
 
 const gcd = (userName) => {
@@ -12,18 +12,18 @@ const gcd = (userName) => {
   let questionCount = 0;
 
   for (questionCount; questionCount < ROUND_NUMBER; questionCount += 1) {
-	const firstNumber = generateRandom();
-	const secondNumber = generateRandom();
-	
-	const expression = `${firstNumber} ${secondNumber}`;
+    const firstNumber = generateRandom();
+    const secondNumber = generateRandom();
+
+    const expression = `${firstNumber} ${secondNumber}`;
     const correctAnswer = countGcd(firstNumber, secondNumber);
-    
-	console.log(`Question: ${expression}`);
+
+    console.log(`Question: ${expression}`);
 
     const answer = userAnswer();
 
     if (Number(answer) !== correctAnswer) {
-	  showFailMessage(answer, correctAnswer, userName);
+      showFailMessage(answer, correctAnswer, userName);
       break;
     } else console.log('Correct!');
   }
