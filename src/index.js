@@ -1,13 +1,11 @@
 import readlineSync from 'readline-sync';
 
-export const ROUND_NUMBER = 3;
-
 // export const gameLoop = () => {
 
 // };
 
+export const ROUND_NUMBER = 3;
 export const userAnswer = () => readlineSync.question('Your answer: ');
-
 export const generateRandom = (limit = 100) => Math.floor(Math.random() * limit);
 
 export const countGcd = (firstNumber, secondNumber) => {
@@ -30,9 +28,11 @@ export const showFailMessage = (answer, correctAnswer, userName) => {
 
 export const generateRandomSequence = () => {
   const result = [];
-  const sequenceStep = generateRandom(10);
+  const SEQUENCE_STEP_RANGE = 10;
+  const SEQUENCE_LENGTH = 10;
+  const sequenceStep = generateRandom(SEQUENCE_STEP_RANGE);
   result.push(generateRandom());
-  for (let i = 1; i < 10; i += 1) {
+  for (let i = 1; i < SEQUENCE_LENGTH; i += 1) {
     result.push(result[i - 1] + sequenceStep);
   }
 
