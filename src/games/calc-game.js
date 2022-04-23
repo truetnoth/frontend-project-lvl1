@@ -4,6 +4,7 @@ import {
   showFailMessage,
   checkAnswer,
   userAnswer,
+  countFromString,
 } from '../index.js';
 
 const calcGame = (userName) => {
@@ -17,7 +18,7 @@ const calcGame = (userName) => {
     const sign = operations[generateRandom(operations.length)];
 
     const expression = `${firstNumber} ${sign} ${secondNumber}`;
-    const correctAnswer = Function(`return ${expression}`)();
+    const correctAnswer = countFromString(firstNumber, secondNumber, sign);
 
     console.log(`Question: ${expression}`);
 

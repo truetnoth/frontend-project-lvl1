@@ -52,3 +52,13 @@ export const isPrime = (num) => {
 
   return true;
 };
+
+export const countFromString = (numberA, numberB, sign) => {
+  if (sign === '+') {
+    return numberA + numberB;
+  } if (sign === '-') {
+    return numberA - numberB;
+  } if (sign === '*') {
+    return numberA * numberB;
+  } return NaN;
+};
