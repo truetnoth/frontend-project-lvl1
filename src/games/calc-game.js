@@ -16,7 +16,7 @@ const calcGame = (userName) => {
     const secondNumber = generateRandom();
     const sign = operations[generateRandom(operations.length)];
 
-    const expression = `${firstNumber}${sign}${secondNumber}`;
+    const expression = `${firstNumber} ${sign} ${secondNumber}`;
     const correctAnswer = Function(`return ${expression}`)();
 
     console.log(`Question: ${expression}`);
