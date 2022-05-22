@@ -12,7 +12,7 @@ const progression = (userName) => {
   let questionCount = 0;
 
   for (questionCount; questionCount < ROUND_NUMBER; questionCount += 1) {
-    const sequence = generateRandomSequence();
+    const sequence = generateRandomSequence(10, 10);
     const sequenceHole = generateRandom(sequence.length);
     const correctAnswer = sequence[sequenceHole];
 

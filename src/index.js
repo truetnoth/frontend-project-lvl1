@@ -26,13 +26,11 @@ export const countGcd = (firstNumber, secondNumber) => {
   return countGcd(secondNumber, firstNumber % secondNumber);
 };
 
-export const generateRandomSequence = () => {
+export const generateRandomSequence = (sequenceLength, sequenceStepRange) => {
   const result = [];
-  const SEQUENCE_STEP_RANGE = 10;
-  const SEQUENCE_LENGTH = 10;
-  const sequenceStep = generateRandom(SEQUENCE_STEP_RANGE);
+  const sequenceStep = generateRandom(sequenceStepRange);
   result.push(generateRandom());
-  for (let i = 1; i < SEQUENCE_LENGTH; i += 1) {
+  for (let i = 1; i < sequenceLength; i += 1) {
     result.push(result[i - 1] + sequenceStep);
   }
 
